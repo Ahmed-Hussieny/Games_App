@@ -10,7 +10,7 @@ export class Ui{
            let disc = e.short_description;
            disc = disc.replace(",", " ");
            disc = disc.split(' ');
-let sevenWords = disc.slice(0, 7).join(' ');
+          let sevenWords = disc.slice(0, 7).join(' ');
             GameBox += `
             <div class="col-lg-3 col-md-4 ">
             <div id="${e.id}" class="Gitem overflow-hidden h-100 pt-3 px-3 border-2 border-dark rounded border">
