@@ -19,6 +19,14 @@ body{
 .badge-color {
     background-color: var(--seconde-color);
  }
+ .Gitem{
+    filter: grayscale(0.7);
+    transition: transform 0.5s, filter 0.5s 0.1s;
+ }
+.Gitem:hover {
+    transform: scale(1.05);
+    filter: grayscale(0);
+ }
 .fss{
     font-size: 10px;
 }

@@ -1,10 +1,19 @@
 export class Ui{
     displayGames(data){
         let GameBox = "";
+        let x = "b,b";
+        x = x.replace(",", " ");
+        console.log(x); // Output will be "b,b"
+        
         data.forEach((e)=>{
+           
+           let disc = e.short_description;
+           disc = disc.replace(",", " ");
+           disc = disc.split(' ');
+let sevenWords = disc.slice(0, 7).join(' ');
             GameBox += `
             <div class="col-lg-3 col-md-4 ">
-            <div id="${e.id}" class="Gitem pt-3 px-3 border-2 border-dark rounded border">
+            <div id="${e.id}" class="Gitem overflow-hidden h-100 pt-3 px-3 border-2 border-dark rounded border">
                 <div class="imgg">
                     <img src="${e.thumbnail}" class="w-100 rounded-2 " alt="">
                </div>
@@ -13,7 +22,7 @@ export class Ui{
                     <p class="text-white fs">${e.title}</p>
                     <button type="button" class="btn btn-sm btn-info fs">Free</button>
                 </div>
-                <p class="text-secondary fs">${e.short_description}</p>
+                <p class="text-secondary fs">${sevenWords}</p>
                </div>
                <hr width="100%" color="#0d0d0d" size="5">
 
